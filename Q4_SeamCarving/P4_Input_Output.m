@@ -30,7 +30,7 @@ maskW = 10;
 
 F = [1 3 0 -3 -1];
 im4 = cat(3,im,mask);
-eng = computeEng(im4,F,W,maskW)
+eng = computeEng(im4,F,W,maskW);
 % 
 % eng =
 % 
@@ -42,6 +42,7 @@ eng = computeEng(im4,F,W,maskW)
 
 seam = [1 ;2 ;3; 4; 1];
 imOut = removeSeamV(im4,seam)
+
 % 
 % 
 % imOut(:,:,1) =
@@ -79,7 +80,9 @@ imOut = removeSeamV(im4,seam)
 %      1     1     0     1
 %     -1     0     1     0
 
-imOut = addSeamV(im4,seam)
+% here
+% imOut = addSeamV(im4,seam)
+
 % 
 % 
 % imOut(:,:,1) =
@@ -117,7 +120,9 @@ imOut = addSeamV(im4,seam)
 %      1     1     0    -1    -1     1
 %     -1    -1    -1     0     1     0
 
-[M,P] = seamV_DP(eng)
+% here
+% [M,P] = seamV_DP(eng)
+
 % 
 % 
 % M =
@@ -139,7 +144,8 @@ imOut = addSeamV(im4,seam)
 %      2     2     4     4     4
 %      2     2     2     4     4
 
-[seam,c] = bestSeamV(M,P)
+% here
+% [seam,c] = bestSeamV(M,P)
 
 % 
 % seam =
@@ -156,7 +162,9 @@ imOut = addSeamV(im4,seam)
 %   -2.4171e+03
 
 
-[seam,im4Out,c] = reduceWidth(im4,eng)
+% here
+% [seam,im4Out,c] = reduceWidth(im4,eng)
+
 % 
 % 
 % seam =
@@ -208,7 +216,9 @@ imOut = addSeamV(im4,seam)
 % 
 %   -2.4171e+03
 
-[seam,im4Out,c] = reduceHeight(im4,eng)
+% here
+% [seam,im4Out,c] = reduceHeight(im4,eng)
+
 % 
 % 
 % seam =
@@ -256,7 +266,9 @@ imOut = addSeamV(im4,seam)
 % 
 %   -2.4799e+03
 
-[seam,im4Out,c] = increaseWidth(im4,eng)
+% here
+% [seam,im4Out,c] = increaseWidth(im4,eng)
+
 % 
 % 
 % seam =
@@ -309,7 +321,8 @@ imOut = addSeamV(im4,seam)
 %   -2.4171e+03
 
 
-[seam,im4Out,c] = increaseHeight(im4,eng)
+% here
+% [seam,im4Out,c] = increaseHeight(im4,eng)
 
 % 
 % 
@@ -366,7 +379,8 @@ imOut = addSeamV(im4,seam)
 % 
 %   -2.4799e+03
 
-[totalCost,imOut ] = intelligentResize(im,1,0,W,mask,maskW)
+% here
+% [totalCost,imOut ] = intelligentResize(im,1,0,W,mask,maskW)
 
 
 % 
@@ -401,7 +415,9 @@ imOut = addSeamV(im4,seam)
 %    101   252   252    31   100    69
 %    158   198   198   196    26   239
 
- [totalCost,imOut ] = intelligentResize(im,-1,0,W,mask,maskW)
+ % here
+% [totalCost,imOut ] = intelligentResize(im,-1,0,W,mask,maskW)
+
 %      
 % 
 % 
@@ -436,7 +452,9 @@ imOut = addSeamV(im4,seam)
 %    101    31   100    69
 %    158   196    26   239
 
-[totalCost,imOut ] = intelligentResize(im,0,-1,W,mask,maskW)
+% here
+% [totalCost,imOut ] = intelligentResize(im,0,-1,W,mask,maskW)
+
 %      
 % 
 % 
@@ -469,7 +487,9 @@ imOut = addSeamV(im4,seam)
 %    158   198   196    26   239
 
 
-[totalCost,imOut ] = intelligentResize(im,2,-2,W,mask,maskW)
+% here
+% [totalCost,imOut ] = intelligentResize(im,2,-2,W,mask,maskW)
+
 %      1
 % 
 %      2
