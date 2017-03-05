@@ -119,7 +119,7 @@ imOut = addSeamV(im4,seam);
 %      1     1     0    -1    -1     1
 %     -1    -1    -1     0     1     0
 
-[M,P] = seamV_DP(eng)
+[M,P] = seamV_DP(eng);
 
 % 
 % 
@@ -142,8 +142,7 @@ imOut = addSeamV(im4,seam);
 %      2     2     4     4     4
 %      2     2     2     4     4
 
-% here
-% [seam,c] = bestSeamV(M,P)
+[seam,c] = bestSeamV(M,P);
 
 % 
 % seam =
@@ -159,9 +158,7 @@ imOut = addSeamV(im4,seam);
 % 
 %   -2.4171e+03
 
-
-% here
-% [seam,im4Out,c] = reduceWidth(im4,eng)
+[seam,im4Out,c] = reduceWidth(im4,eng);
 
 % 
 % 
@@ -214,8 +211,7 @@ imOut = addSeamV(im4,seam);
 % 
 %   -2.4171e+03
 
-% here
-% [seam,im4Out,c] = reduceHeight(im4,eng)
+[seam,im4Out,c] = reduceHeight(im4,eng);
 
 % 
 % 
@@ -264,8 +260,7 @@ imOut = addSeamV(im4,seam);
 % 
 %   -2.4799e+03
 
-% here
-% [seam,im4Out,c] = increaseWidth(im4,eng)
+[seam,im4Out,c] = increaseWidth(im4,eng);
 
 % 
 % 
@@ -319,8 +314,7 @@ imOut = addSeamV(im4,seam);
 %   -2.4171e+03
 
 
-% here
-% [seam,im4Out,c] = increaseHeight(im4,eng)
+[seam,im4Out,c] = increaseHeight(im4,eng)
 
 % 
 % 
