@@ -41,7 +41,7 @@ eng = computeEng(im4,F,W,maskW);
 %   309.9671 -422.5076 -206.7120 -157.1606  111.4617
 
 seam = [1 ;2 ;3; 4; 1];
-imOut = removeSeamV(im4,seam)
+imOut = removeSeamV(im4,seam);
 
 % 
 % 
@@ -80,8 +80,7 @@ imOut = removeSeamV(im4,seam)
 %      1     1     0     1
 %     -1     0     1     0
 
-% here
-% imOut = addSeamV(im4,seam)
+imOut = addSeamV(im4,seam);
 
 % 
 % 
@@ -120,8 +119,7 @@ imOut = removeSeamV(im4,seam)
 %      1     1     0    -1    -1     1
 %     -1    -1    -1     0     1     0
 
-% here
-% [M,P] = seamV_DP(eng)
+[M,P] = seamV_DP(eng)
 
 % 
 % 
